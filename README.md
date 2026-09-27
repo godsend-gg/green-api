@@ -44,15 +44,6 @@ npm run dev
 npm run build
 ```
 
-## Настройка GREEN-API
-
-1. Создайте и авторизуйте инстанс MAX в личном кабинете GREEN-API.
-2. В настройках уведомлений оставьте `webhookUrl` пустым и включите входящие уведомления — приложение использует HTTP API очередь.
-3. Введите `idInstance` и `apiTokenInstance` на стартовом экране.
-4. Введите номер получателя с кодом страны и отправьте сообщение.
-
-Обмен реализован по методам [SendMessage](https://green-api.com/v3/docs/api/sending/SendMessage/) и [ReceiveNotification](https://green-api.com/v3/docs/api/receiving/technology-http-api/ReceiveNotification/). Получение очереди следует схеме GREEN-API: уведомление удаляется только после успешной обработки.
-
 ## Ограничения
 
 Это клиентское тестовое приложение, поэтому токен неизбежно находится в браузере пользователя. Для production-системы вызовы GREEN-API и хранение секретов следует вынести на сервер.
